@@ -14,7 +14,7 @@
  *
  * A path to a file in the "pages" directory will have a path like:
  *
- *  dirname(__DIR__) . '/pages/<page name>.php'
+ *  dirname(__FILE__) . '/pages/<page name>.php'
  *
  * Where <page name> is the name of the file you want to include.
  *
