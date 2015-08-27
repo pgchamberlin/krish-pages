@@ -32,6 +32,24 @@
     <head>
     </head>
     <body>
-        <?php /* Use PHP's include() method to render the correct page content in here */ ?>
+        <?php /* Use PHP's include() method to render the correct page content in here */ 
+            echo'
+                <a href="/pages.php?page=home"> ++Home++ </a>
+                <a href="/pages.php?page=about"> ++About++ </a>
+                <a href="pages.php?page=interests"> ++Interests++ </a>';
+                
+                function
+                
+                $page = $_GET["page"];
+                if($page == "about"){
+                    about();
+                }
+                else if($page == "interests"){
+                    interests();
+                }
+                else{
+                    home();
+                }
+        ?>
     </body>
 </html>
