@@ -36,9 +36,17 @@
             echo'
                 <a href="/pages.php?page=home"> ++Home++ </a>
                 <a href="/pages.php?page=about"> ++About++ </a>
-                <a href="pages.php?page=interests"> ++Interests++ </a>';
+                <a href="/pages.php?page=interests"> ++Interests++ </a>';
                 
-                function
+                function about (){
+                    echo"";
+                } 
+                function interests(){
+                    echo"";
+                }
+                function home(){
+                    echo"";
+                }
                 
                 $page = $_GET["page"];
                 if($page == "about"){
