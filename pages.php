@@ -38,7 +38,11 @@
         <?php /* Use PHP's include() method to render the correct page content in here */ 
                 function about (){
                     include dirname(__FILE__) . '/pages/about.php';
-                    echo"";
+                    echo"Hello! My name is Krish Oza, I am 11 years<br />
+                    old and I am a young coder, I recently<br />
+                    attended YRS to improve my skills and I hope<br />
+                    to be a proffesional Coder one day and create<br />
+                    my very own company.";
                 } 
                 function interests(){
                     include dirname(__FILE__) . '/pages/interests.php';
