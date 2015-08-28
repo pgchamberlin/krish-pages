@@ -39,12 +39,15 @@
                 <a href="/pages.php?page=interests"> ++Interests++ </a>';
                 
                 function about (){
+                    include '/pages/about.php';
                     echo"";
                 } 
                 function interests(){
+                    include'/pages/interests.php';
                     echo"";
                 }
                 function home(){
+                    include'/pages/home.php';
                     echo"";
                 }
                 
