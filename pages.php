@@ -37,15 +37,15 @@
         <a href="/pages.php?page=interests"> ++Interests++ </a>
         <?php /* Use PHP's include() method to render the correct page content in here */ 
                 function about (){
-                    include '/pages/about.php';
+                    include dirname(__FILE__) . '/pages/about.php';
                     echo"";
                 } 
                 function interests(){
-                    include'/pages/interests.php';
+                    include dirname(__FILE__) . '/pages/interests.php';
                     echo"";
                 }
                 function home(){
-                    include'/pages/home.php';
+                    include dirname(__FILE__) . '/pages/home.php';
                     echo"";
                 }
                 
