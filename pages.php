@@ -32,10 +32,10 @@
     <head>
     </head>
     <body>
+        <a href="/pages.php?page=home"> ++Home++ </a>
+        <a href="/pages.php?page=about"> ++About++ </a>
+        <a href="/pages.php?page=interests"> ++Interests++ </a>
         <?php /* Use PHP's include() method to render the correct page content in here */ 
-            echo'
-                ';
-                
                 function about (){
                     include '/pages/about.php';
                     echo"";
