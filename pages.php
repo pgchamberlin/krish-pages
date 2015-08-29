@@ -35,7 +35,9 @@
         <a href="/pages.php?page=home"> ++Home++ </a>
         <a href="/pages.php?page=about"> ++About++ </a>
         <a href="/pages.php?page=interests"> ++Interests++ </a>
+        
         <?php /* Use PHP's include() method to render the correct page content in here */ 
+//
                 function about (){
                     include dirname(__FILE__) . '/pages/about.php';
                     echo"Hello! My name is Krish Oza, I am 11 years<br />
@@ -43,26 +45,31 @@
                     attended YRS to improve my skills and I hope<br />
                     to be a proffesional Coder one day and create<br />
                     my very own company.";
-                } 
+                }
+//                
                 function interests(){
                     include dirname(__FILE__) . '/pages/interests.php';
                     echo"";
                 }
+//                
                 function home(){
                     include dirname(__FILE__) . '/pages/home.php';
                     echo"";
                 }
-                
+//                
                 $page = $_GET["page"];
                 if($page == "about"){
                     about();
                 }
+//                
                 else if($page == "interests"){
                     interests();
                 }
+//                
                 else{
                     home();
                 }
+//                
         ?>
     </body>
 </html>
