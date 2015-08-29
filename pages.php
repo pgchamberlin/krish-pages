@@ -49,7 +49,18 @@
 //                
                 function interests(){
                     include dirname(__FILE__) . '/pages/interests.php';
-                    echo"";
+                    echo"
+                    <ol>
+                        <li>Likes</li>
+                            <ul>
+                                <li>Coding</li>
+	                            <li>Maths</li>
+	                            <li>Minecraft</li>
+                            </ul>
+                        <li>Dislikes</li>
+                        <ul></ul>
+                    </ol>
+                    ";
                 }
 //                
                 function home(){
