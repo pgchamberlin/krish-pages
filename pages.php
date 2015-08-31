@@ -32,55 +32,44 @@
     <head>
     </head>
     <body>
-        <a href="/pages.php?page=home"> ++Home++ </a>
-        <a href="/pages.php?page=about"> ++About++ </a>
-        <a href="/pages.php?page=interests"> ++Interests++ </a>
+        <a href="/krish-pages/pages.php?page=home"> ++Home++ </a>
+        <a href="/krish-pages/pages.php?page=about"> ++About++ </a>
+        <a href="/krish-pages/pages.php?page=interests"> ++Interests++ </a>
         
         <?php /* Use PHP's include() method to render the correct page content in here */ 
-//
+
                 function about (){
                     include dirname(__FILE__) . '/pages/about.php';
-                    echo"Hello! My name is Krish Oza, I am 11 years<br />
-                    old and I am a young coder, I recently<br />
-                    attended YRS to improve my skills and I hope<br />
-                    to be a proffesional Coder one day and create<br />
-                    my very own company.";
                 }
-//                
+                
                 function interests(){
                     include dirname(__FILE__) . '/pages/interests.php';
-                    echo"
-                    <ol>
-                        <li>Likes</li>
-                            <ul>
-                                <li>Coding</li>
-	                            <li>Maths</li>
-	                            <li>Minecraft</li>
-                            </ul>
-                        <li>Dislikes</li>
-                        <ul></ul>
-                    </ol>
-                    ";
                 }
-//                
-                function home(){
-                    include dirname(__FILE__) . '/pages/home.php';
-                    echo"";
-                }
-//                
+                
+            function home(){
+                include dirname(__FILE__) . '/pages/home.php';
+            }
+                
                 $page = $_GET["page"];
+
+                if (is_null($page)) {
+                    $page = "home";
+                }
+
+
                 if($page == "about"){
                     about();
                 }
-//                
+                
                 else if($page == "interests"){
                     interests();
                 }
-//                
+                
                 else{
                     home();
+                
                 }
-//                
+                
         ?>
     </body>
 </html>
