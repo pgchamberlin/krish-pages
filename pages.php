@@ -35,38 +35,27 @@
         <a href="/krish-pages/pages.php?page=home"> ++Home++ </a>
         <a href="/krish-pages/pages.php?page=about"> ++About++ </a>
         <a href="/krish-pages/pages.php?page=interests"> ++Interests++ </a>
-        
         <?php /* Use PHP's include() method to render the correct page content in here */ 
 
-                function about (){
-                    include dirname(__FILE__) . '/pages/about.php';
-                }
                 
-                function interests(){
-                    include dirname(__FILE__) . '/pages/interests.php';
-                }
-                
-            function home(){
-                include dirname(__FILE__) . '/pages/home.php';
-            }
-                
-                $page = $_GET["page"];
-
-                if (is_null($page)) {
+                if (!isset($_GET["page"])) {
                     $page = "home";
+                }
+                else{
+                    $page = $_GET["page"];
                 }
 
 
                 if($page == "about"){
-                    about();
+                    include dirname(__FILE__) . '/pages/about.php';
                 }
                 
                 else if($page == "interests"){
-                    interests();
+                    include dirname(__FILE__) . '/pages/interests.php';
                 }
                 
                 else{
-                    home();
+                    include dirname(__FILE__) . '/pages/home.php';
                 
                 }
                 
