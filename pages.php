@@ -32,6 +32,33 @@
     <head>
     </head>
     <body>
-        <?php /* Use PHP's include() method to render the correct page content in here */ ?>
+        <a href="/krish-pages/pages.php?page=home"> ++Home++ </a>
+        <a href="/krish-pages/pages.php?page=about"> ++About++ </a>
+        <a href="/krish-pages/pages.php?page=interests"> ++Interests++ </a>
+        <?php /* Use PHP's include() method to render the correct page content in here */ 
+
+                
+                if (!isset($_GET["page"])) {
+                    $page = "home";
+                }
+                else{
+                    $page = $_GET["page"];
+                }
+
+
+                if($page == "about"){
+                    include dirname(__FILE__) . '/pages/about.php';
+                }
+                
+                else if($page == "interests"){
+                    include dirname(__FILE__) . '/pages/interests.php';
+                }
+                
+                else{
+                    include dirname(__FILE__) . '/pages/home.php';
+                
+                }
+                
+        ?>
     </body>
 </html>
